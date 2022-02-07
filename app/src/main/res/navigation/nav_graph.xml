@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.android.lab3task4.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_1to2"
+            app:destination="@id/secondFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.android.lab3task4.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_2to1"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_2to3"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.android.lab3task4.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_3to2"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_3to4"
+            app:destination="@id/fourthFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.android.lab3task4.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/action_4to3"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+</navigation>
