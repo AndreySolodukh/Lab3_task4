@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".SecondFragment"
+    android:id="@+id/fragment2">
 
     <TextView
         android:id="@+id/text2"
@@ -16,7 +17,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button2to1"
+        android:id="@+id/bnToFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="to Activity 1"
@@ -25,12 +26,12 @@
         app:layout_constraintTop_toBottomOf="@id/text2"/>
 
     <Button
-        android:id="@+id/button2to3"
+        android:id="@+id/bnToThird"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="to Activity 3"
         android:gravity="center"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/button2to1"/>
+        app:layout_constraintTop_toBottomOf="@id/bnToFirst"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

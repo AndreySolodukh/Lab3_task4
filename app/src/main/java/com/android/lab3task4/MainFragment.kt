@@ -19,7 +19,7 @@ class MainFragment: Fragment() {
         return binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-        binding.button1to2.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             it.findNavController().navigate(R.id.action_1to2)
         }
         super.onActivityCreated(savedInstanceState)

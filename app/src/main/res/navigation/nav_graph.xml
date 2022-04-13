@@ -22,7 +22,9 @@
         tools:layout="@layout/fragment_second" >
         <action
             android:id="@+id/action_2to1"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_2to3"
             app:destination="@id/thirdFragment" />
@@ -34,20 +36,15 @@
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" >
         <action
-            android:id="@+id/action_3to2"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_3to1"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"/>
         <action
-            android:id="@+id/action_3to4"
-            app:destination="@id/fourthFragment" />
+            android:id="@+id/action_3to2"
+            app:destination="@id/secondFragment"
+            app:popUpTo="@id/secondFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
-    <fragment
-        android:id="@+id/fourthFragment"
-        android:name="com.android.lab3task4.FourthFragment"
-        android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" >
-        <action
-            android:id="@+id/action_4to3"
-            app:destination="@id/thirdFragment" />
-    </fragment>
 </navigation>
